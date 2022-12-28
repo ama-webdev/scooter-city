@@ -92,15 +92,7 @@
                         getting, there has taken on a whole life of its own.
                     </p>
                     <p>
-                        I rent out bikes to travellers who want to have the freedom to drive themselves around Mandalay, and
-                        the surrounding areas, or for the more adventurous minded, you can take one of the bikes for a
-                        longer tour around the country. That said, there are some areas of the country which are off limits
-                        to tourists, so please try to give us a general idea of where you are intending to go and we will be
-                        able to advise you on what’s possible. Currently, Inle Lake and Bagan are off limits to tourists on
-                        motorcycles, unless with a large organized tour.
-                    </p>
-                    <p>
-                        I rent out bikes to travellers who want to have the freedom to drive themselves around Mandalay, and
+                        I rent out bikes to travellers who want to have the freedom to drive themselves around Maubin, and
                         the surrounding areas, or for the more adventurous minded, you can take one of the bikes for a
                         longer tour around the country. That said, there are some areas of the country which are off limits
                         to tourists, so please try to give us a general idea of where you are intending to go and we will be

@@ -13,7 +13,7 @@
                 <h5 class="my-5"><i class="fas fa-arrow-left back-btn"></i> Bike Detail</h5>
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="{{ asset('uploads/bikes/bike.jfif') }}" alt="">
+                        <img src="{{ asset($bike->photo) }}" alt="">
                     </div>
                     <div class="col-md-9">
                         <h5>{{ $bike->name }} <span class="text-danger">({{ $bike->qty }})</span> </h5>
