@@ -19,6 +19,9 @@ class UserSeeder extends Seeder
         $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
+            'phone_no' => '09111111111',
+            'address' => 'Maubin',
+            'gender' => 'male',
             'password' => Hash::make('admin123')
         ]);
         $admin->assignRole('admin');
@@ -26,6 +29,9 @@ class UserSeeder extends Seeder
         $company = User::create([
             'name' => 'Vendor',
             'email' => 'vendor@gmail.com',
+            'phone_no' => '09111111111',
+            'address' => 'Maubin',
+            'gender' => 'male',
             'password' => Hash::make('admin123')
         ]);
         $company->assignRole('vendor');
@@ -33,6 +39,9 @@ class UserSeeder extends Seeder
         $freelancer = User::create([
             'name' => 'User',
             'email' => 'user@gmail.com',
+            'phone_no' => '09111111111',
+            'address' => 'Maubin',
+            'gender' => 'male',
             'password' => Hash::make('admin123')
         ]);
         $freelancer->assignRole('user');

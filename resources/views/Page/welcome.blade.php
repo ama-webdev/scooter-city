@@ -68,7 +68,9 @@
     <header>
         <div class="container">
             <h1 class="text-white text-center text-uppercase fw-bold title">Scooter City</h1>
-            <a href="{{ route('user.bikes') }}" class="rent-btn">Rent Now</a>
+            @auth
+                <a href="{{ route('user.bikes') }}" class="rent-btn">Rent Now</a>
+            @endauth
         </div>
     </header>
     <main>

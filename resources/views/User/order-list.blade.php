@@ -4,6 +4,7 @@
 @section('content')
     @php
         $status = app('request')->input('status');
+        $success = app('request')->input('success');
     @endphp
     <div class="container">
         <div class="row">
@@ -19,6 +20,9 @@
                             </select>
                         </div>
                     </div>
+                    @if ($success)
+                        <p class="text-success text-center">Successfully ordered.</p>
+                    @endif
                     <table class="table">
                         <thead>
                             <tr>

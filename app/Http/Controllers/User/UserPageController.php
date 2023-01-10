@@ -80,7 +80,7 @@ class UserPageController extends Controller
         $nrc = $request->nrc;
         $remark = $request->remark;
         $address = $request->address;
-        $code = UUID::generate();
+        $code = UUID::OrderCode();
         $total_bikes = 0;
         $dateCount = DATE::duration(now(), $end_date);
         $total = 0;

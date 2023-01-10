@@ -259,6 +259,7 @@
                         $(".cart-error").html(``);
                         $('.grand_total').text('');
                         $('#duration').text('0');
+                        window.location.href = "order-list?success=true";
                     },
                     error: function(response) {
                         var html = '';

@@ -48,6 +48,9 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Phone No</th>
+                                            <th>Address</th>
+                                            <th>Gender</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -56,6 +59,10 @@
                                             <tr>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
+                                                <td>{{ $user->phone_no }}</td>
+                                                <td>{{ $user->address }}</td>
+                                                <td>{{ $user->gender }}</td>
+
                                                 <td>
                                                     <a href="{{ route('admin.users.edit', $user->id) }}"
                                                         class="text-warning"><i class="far fa-edit"></i></a>
@@ -82,6 +89,9 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Phone No</th>
+                                            <th>Address</th>
+                                            <th>Gender</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -90,6 +100,9 @@
                                             <tr>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
+                                                <td>{{ $user->phone_no }}</td>
+                                                <td>{{ $user->address }}</td>
+                                                <td>{{ $user->gender }}</td>
                                                 <td>
                                                     <a href="{{ route('admin.users.edit', $user->id) }}"
                                                         class="text-warning"><i class="far fa-edit"></i></a>
@@ -116,6 +129,9 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Phone No</th>
+                                            <th>Address</th>
+                                            <th>Gender</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -123,6 +139,9 @@
                                             <tr>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
+                                                <td>{{ $user->phone_no }}</td>
+                                                <td>{{ $user->address }}</td>
+                                                <td>{{ $user->gender }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
