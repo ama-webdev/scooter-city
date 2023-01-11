@@ -40,7 +40,7 @@
                 aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
                 target="_blank">
-                <span class="ms-1 font-weight-bold">Scooter City</span>
+                <span class="ms-1 font-weight-bold">Bike Rental System</span>
             </a>
         </div>
         <hr class="horizontal dark mt-0">

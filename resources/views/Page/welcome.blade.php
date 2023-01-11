@@ -67,7 +67,7 @@
 @section('content')
     <header>
         <div class="container">
-            <h1 class="text-white text-center text-uppercase fw-bold title">Scooter City</h1>
+            <h1 class="text-white text-center text-uppercase fw-bold title">Bike Rental System</h1>
             @auth
                 <a href="{{ route('user.bikes') }}" class="rent-btn">Rent Now</a>
             @endauth

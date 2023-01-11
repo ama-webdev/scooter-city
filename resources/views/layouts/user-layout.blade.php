@@ -26,7 +26,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('page.welcome') }}">Scooter City</a>
+            {{-- <a class="navbar-brand" href="{{ route('page.welcome') }}">Scooter City</a> --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -43,6 +43,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.cart') }}">Cart <span
                                 class="badge bg-light badge-light text-danger cart-count"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('user.order-list') }}">Order List </a>
                     </li>
                     <!-- Authentication Links -->
                     @guest
@@ -65,9 +68,9 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('user.order-list') }}">
+                                {{-- <a class="dropdown-item" href="{{ route('user.order-list') }}">
                                     Order List
-                                </a>
+                                </a> --}}
                                 <a class="dropdown-item" href="{{ route('user.change-password') }}">
                                     Change Password
                                 </a>
