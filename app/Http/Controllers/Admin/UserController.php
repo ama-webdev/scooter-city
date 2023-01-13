@@ -38,6 +38,9 @@ class UserController extends Controller
             'name' => 'required|string',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|max:20',
+            'address' => 'required|string',
+            'phone_no' => 'required|string',
+            'gender' => 'required|in:male,female',
             'confirm_password' => 'required|same:password',
             'role' => 'required|exists:roles,name',
         ]);
@@ -45,6 +48,9 @@ class UserController extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->address = $request->address;
+        $user->phone_no = $request->phone_no;
+        $user->gender = $request->gender;
         $user->password = Hash::make($request->password);
         $user->save();
         $user->assignRole($request->role);
@@ -65,11 +71,17 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email|unique:users,email,' . $id,
+            'address' => 'required|string',
+            'phone_no' => 'required|string',
+            'gender' => 'required|in:male,female',
         ]);
 
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->address = $request->address;
+        $user->phone_no = $request->phone_no;
+        $user->gender = $request->gender;
         $user->update();
 
         return redirect()->route('admin.users.index');

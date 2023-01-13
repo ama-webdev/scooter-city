@@ -56,6 +56,40 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="">Phone No</label>
+                            <input type="text" name="phone_no"
+                                class="form-control @error('phone_no') is-invalid @enderror"
+                                value="{{ old('phone_no', $user->phone_no) }}">
+                            @error('phone_no')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="">Address</label>
+                            <textarea name="address" class="form-control @error('address') is-invalid @enderror">{{ old('address', $user->address) }}</textarea>
+                            @error('address')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="">Gender</label>
+                            <select name="gender" class="form-select @error('gender') is-invalid @enderror">
+                                <option value="">Choose Gender</option>
+                                <option value="male" @if (old('gender', $user->gender) == 'male') selected @endif>Male</option>
+                                <option value="female" @if (old('gender', $user->gender) == 'female') selected @endif>Female</option>
+                            </select>
+                            @error('gender')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
                             <button class="btn btn-primary">Update</button>
                         </div>
                     </form>
