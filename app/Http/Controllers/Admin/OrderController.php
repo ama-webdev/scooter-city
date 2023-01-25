@@ -44,4 +44,27 @@ class OrderController extends Controller
         $order->update();
         return redirect()->route('admin.orders.index');
     }
+
+    public function cancel(Request $request)
+    {
+        $id = $request->id;
+        $order = Booking::findOrFail($id);
+        foreach ($order->booking_details as $item) {
+            $bike = Bike::find($item->bike_id);
+            $bike->qty += $item->qty;
+            $bike->update();
+        }
+        $order->status = 'cancel';
+        $order->update();
+        return response(['message' => 'successfully updated.']);
+    }
+
+    public function rent(Request $request)
+    {
+        $id = $request->id;
+        $order = Booking::findOrFail($id);
+        $order->status = 'rent';
+        $order->update();
+        return redirect()->route('admin.orders.index');
+    }
 }

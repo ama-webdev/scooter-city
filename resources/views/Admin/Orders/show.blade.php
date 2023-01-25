@@ -110,13 +110,21 @@
                             </tbody>
                         </table>
                     </div>
-                    <form action="{{ route('admin.orders.return') }}" method="POST">
-                        @csrf
-                        <input type="hidden" name="id" value="{{ $order->id }}">
-                        @if ($order->status == 'booking')
+                    @if ($order->status == 'rent')
+                        <form action="{{ route('admin.orders.return') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $order->id }}">
                             <button class="btn btn-danger">Return</button>
-                        @endif
-                    </form>
+                        </form>
+                    @endif
+
+                    @if ($order->status == 'booking')
+                        <form action="{{ route('admin.orders.rent') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $order->id }}">
+                            <button class="btn btn-danger">Rent</button>
+                        </form>
+                    @endif
                 </div>
             </div>
         </div>

@@ -31,6 +31,7 @@ Route::middleware(['auth', 'role:admin|user|vendor'])->name('user.')->group(func
     Route::post('/order', [UserPageController::class, 'order'])->name('order');
     Route::get('/order-list', [UserPageController::class, 'orderList'])->name('order-list');
     Route::get('/order-list/{id}', [UserPageController::class, 'orderDetail'])->name('order-detail');
+    Route::post('cancel-order', [OrderController::class, 'cancel'])->name('orders.cancel');
     Route::get('/change-password', [UserPageController::class, 'showChangePassword'])->name('show-change-password');
     Route::post('/change-password', [UserPageController::class, 'changePassword'])->name('change-password');
 });
@@ -75,6 +76,7 @@ Route::middleware(['auth', 'role:admin|vendor'])->prefix('admin')->name('admin.'
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
     Route::post('return', [OrderController::class, 'return'])->name('orders.return');
+    Route::post('rent', [OrderController::class, 'rent'])->name('orders.rent');
 
     // auth
     Route::get('/change-password', [AuthController::class, 'showChangePassword'])->name('show-change-password');

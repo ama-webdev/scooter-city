@@ -34,6 +34,7 @@
                                 <th>Remain</th>
                                 <th>Start Date</th>
                                 <th>End Date</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,6 +63,12 @@
                                     @endif
                                     <td>{{ $order->start_date }}</td>
                                     <td>{{ $order->end_date }}</td>
+                                    @if ($order->status == 'booking')
+                                        <td><button class="btn btn-danger btn-sm cancel-btn"
+                                                data-id="{{ $order->id }}">Cancel</button></td>
+                                    @else
+                                        <td><button class="btn btn-danger btn-sm disabled" disabled>Cancel</button></td>
+                                    @endif
                                 </tr>
                             @endforeach
                         </tbody>
@@ -86,6 +93,24 @@
             $('#status-filter').change(function(e) {
                 e.preventDefault();
                 filter();
+            });
+            $('.cancel-btn').click(function(e) {
+                e.preventDefault();
+                var result = confirm('Are You Sure?')
+                if (result) {
+                    var data = {
+                        id: $(this).data('id')
+                    }
+                    $.ajax({
+                        type: "post",
+                        url: "cancel-order",
+                        data: data,
+                        dataType: "json",
+                        success: function(response) {
+                            window.location.reload()
+                        }
+                    });
+                }
             });
         });
     </script>

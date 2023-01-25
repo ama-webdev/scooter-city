@@ -70,7 +70,11 @@
                                         </td>
                                         <td>
                                             <span
-                                                class="text-uppercase text-sm text-white p-1 @if ($order->status == 'booking') bg-danger @else bg-success @endif">{{ $order->status }}</span>
+                                                class="text-uppercase text-sm text-white p-1 @if ($order->status == 'booking') bg-warning @elseif($order->status == 'rent') bg-success
+                                                 @elseif($order->status == 'cancel') bg-danger
+                                                @elseif($order->status == 'return') bg-info @endif">{{ $order->status }}</span>
+
+
                                         </td>
                                         <td>{{ $order->qty }}</td>
                                         <td class="text-center">{{ number_format($order->total) }}Ks</td>
