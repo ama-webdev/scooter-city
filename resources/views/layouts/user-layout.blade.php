@@ -121,6 +121,15 @@
                     $('.cart-count').text(0);
                 }
             }
+
+            $("#show_hide_password").change(function(event) {
+                event.preventDefault();
+                if (this.checked) {
+                    $('.password').attr('type', 'text');
+                } else {
+                    $('.password').attr('type', 'password');
+                }
+            });
         });
     </script>
     @yield('script')

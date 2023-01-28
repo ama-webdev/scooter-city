@@ -206,6 +206,14 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
+            $("#show_hide_password").change(function(event) {
+                event.preventDefault();
+                if (this.checked) {
+                    $('.password').attr('type', 'text');
+                } else {
+                    $('.password').attr('type', 'password');
+                }
+            });
         });
     </script>
     @yield('script')

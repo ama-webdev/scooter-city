@@ -23,7 +23,7 @@
                                 <div class="form-group">
                                     <label for="">Old Password</label>
                                     <input type="password" name="old_password"
-                                        class="form-control @error('old_password') is-invalid @enderror"
+                                        class="form-control password @error('old_password') is-invalid @enderror"
                                         value="{{ old('old_password') }}">
                                     @error('old_password')
                                         <span class="invalid-feedback" role="alert">
@@ -34,7 +34,7 @@
                                 <div class="form-group">
                                     <label for="">New Password</label>
                                     <input type="password" name="new_password"
-                                        class="form-control @error('new_password') is-invalid @enderror"
+                                        class="form-control password @error('new_password') is-invalid @enderror"
                                         value="{{ old('new_password') }}">
                                     @error('new_password')
                                         <span class="invalid-feedback" role="alert">
@@ -45,13 +45,21 @@
                                 <div class="form-group">
                                     <label for="">Confirm Password</label>
                                     <input type="password" name="confirm_password"
-                                        class="form-control @error('confirm_password') is-invalid @enderror"
+                                        class="form-control password @error('confirm_password') is-invalid @enderror"
                                         value="{{ old('confirm_password') }}">
                                     @error('confirm_password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="show_hide_password">
+                                        <label class="form-check-label" for="show_hide_password">
+                                            Show password
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-primary">Change</button>

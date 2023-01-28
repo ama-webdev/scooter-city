@@ -40,8 +40,8 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                        class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="current-password">
+                                        class="form-control password @error('password') is-invalid @enderror"
+                                        name="password" required autocomplete="current-password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -51,18 +51,18 @@
                                 </div>
                             </div>
 
-                            {{-- <div class="row mb-3">
+                            <div class="row mb-3">
                                 <div class="col-md-6 offset-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                            {{ old('remember') ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="checkbox" name="remember"
+                                            id="show_hide_password">
 
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
+                                        <label class="form-check-label" for="show_hide_password">
+                                            Show password
                                         </label>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
 
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">

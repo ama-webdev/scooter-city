@@ -34,7 +34,7 @@
                                 <div class="form-group">
                                     <label for="">Password</label>
                                     <input type="password" name="password"
-                                        class="form-control @error('password') is-invalid @enderror"
+                                        class="form-control password @error('password') is-invalid @enderror"
                                         value="{{ old('password') }}">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -45,13 +45,21 @@
                                 <div class="form-group">
                                     <label for="">Confirm Password</label>
                                     <input type="password" name="confirm_password"
-                                        class="form-control @error('confirm_password') is-invalid @enderror"
+                                        class="form-control password @error('confirm_password') is-invalid @enderror"
                                         value="{{ old('confirm_password') }}">
                                     @error('confirm_password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="show_hide_password">
+                                        <label class="form-check-label" for="show_hide_password">
+                                            Show password
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-primary">Change</button>
